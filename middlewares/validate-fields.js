@@ -10,7 +10,7 @@ const  validateFields = (req, res = response, next) => {
             errors: errors.mapped()
         });
     }
-     next();
+    next();
 }
 
 module.exports = {
