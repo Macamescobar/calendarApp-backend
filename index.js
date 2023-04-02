@@ -10,7 +10,11 @@ const app = express();
 dbConnection();
 
 // CORS
-app.use(cors());
+
+app.options('*', cors({origin: 'http://localhost:5173', optionsSuccessStatus: 200}))
+app.use(cors(
+    { origin: 'http://localhost:5173', optionsSuccessStatus: 200}
+));
 
 // Directorio publico 
 app.use( express.static('public'));
