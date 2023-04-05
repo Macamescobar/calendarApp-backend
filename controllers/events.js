@@ -56,7 +56,7 @@ const updateEvent = async(req, res = response ) => {
         if ( event.user.toString() !== uid ) {
             return res.status(401).json({
                 ok: false,
-                msg: 'No tiene privilegio de editar este evento'
+                msg: "You can't edit this event"
             })
         }
 
@@ -104,7 +104,7 @@ const deleteEvent = async(req, res = response ) => {
         if ( event.user.toString() !== uid ) {
             return res.status(401).json({
                 ok: false,
-                msg: 'No tiene privilegio de borrar este evento'
+                msg: "You can't delete this event"
             })
         }
 
